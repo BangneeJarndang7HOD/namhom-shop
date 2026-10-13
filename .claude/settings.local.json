@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /Applications/XAMPP/xamppfiles/bin/ 2>/dev/null | head -30; echo \"---\"; ls /Applications/XAMPP/xamppfiles/ 2>/dev/null)",
+      "Read(//Applications/XAMPP/xamppfiles/bin/**)",
+      "Read(//Applications/XAMPP/xamppfiles/**)",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/php -v)",
+      "Bash(/Applications/XAMPP/xamppfiles/xampp status *)",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/mysqladmin -uroot status)",
+      "Bash(sudo /Applications/XAMPP/xamppfiles/xampp startmysql)",
+      "Bash(/Applications/XAMPP/xamppfiles/xampp startmysql *)",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/php -l /Applications/XAMPP/xamppfiles/htdocs/ParfumLuxe/admin/users.php)",
+      "Bash(sudo -n true)",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/mysql -uroot -e \"SHOW DATABASES LIKE 'namhom_db';\")",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/mysql -uroot namhom_db -e \"DESCRIBE orders;\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost/ParfumLuxe/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost/ParfumLuxe/products.php)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost/ParfumLuxe/admin/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost/ParfumLuxe/admin/users.php)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost/ParfumLuxe/login.php)",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/mysql -uroot namhom_db -e \"SELECT id, username, email, is_admin FROM users;\")",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/mysql -uroot namhom_db -e ' *)",
+      "Bash(/Applications/XAMPP/xamppfiles/bin/mysql -uroot namhom_db -e \"SELECT COUNT\\(*\\) FROM order_items; SELECT COUNT\\(*\\) FROM products; SELECT COUNT\\(*\\) FROM cart;\")"
+    ]
+  }
+}
